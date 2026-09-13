@@ -1,4 +1,4 @@
-\# SRE Incident Agent
+**# SRE Incident Agent**
 
 
 
@@ -6,7 +6,7 @@ A governed multi-agent SRE incident response system for automated incident triag
 
 
 
-\## Overview
+**## Overview**
 
 
 
@@ -18,7 +18,7 @@ The system takes incident alerts and operational data as input and processes the
 
 
 
-The main workflow is:
+**The main workflow is:**
 
 
 
@@ -44,7 +44,7 @@ The system is designed with safety and Human-in-the-Loop (HITL) controls so that
 
 
 
-\## Key Features
+**## Key Features**
 
 
 
@@ -76,7 +76,7 @@ The system is designed with safety and Human-in-the-Loop (HITL) controls so that
 
 
 
-\## Architecture
+**## Architecture**
 
 
 
