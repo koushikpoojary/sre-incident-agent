@@ -1,0 +1,8 @@
+[
+  {
+    "service": "payment-api",
+    "previous_version": "v2.4.0",
+    "current_version": "v2.4.1",
+    "deployment_time": "2026-09-10T10:25:00"
+  }
+]

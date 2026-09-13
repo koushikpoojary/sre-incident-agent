@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SRE Incident Agent</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div>
+
+        <h1>
+            SRE Incident Agent
+        </h1>
+
+        <p>
+            Governed multi-agent incident response
+        </p>
+
+    </div>
+
+
+    <div class="status">
+
+        <span class="status-dot"></span>
+
+        SYSTEM ONLINE
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+
+    <!-- =====================================================
+         INCIDENT OVERVIEW
+         ===================================================== -->
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <h2>
+                Incident Overview
+            </h2>
+
+            <span
+                id="severity"
+                class="badge critical"
+            >
+                Loading...
+            </span>
+
+        </div>
+
+
+        <div class="overview-grid">
+
+
+            <div>
+
+                <label>
+                    Incident
+                </label>
+
+                <strong id="incident-id">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Service
+                </label>
+
+                <strong id="service">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Severity
+                </label>
+
+                <strong id="severity-text">
+                    Loading...
+                </strong>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Status
+                </label>
+
+                <strong id="incident-status">
+                    INVESTIGATING
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ALERT CORRELATION
+         ===================================================== -->
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <h2>
+                Alert Correlation
+            </h2>
+
+            <span id="alert-count">
+                0 alerts
+            </span>
+
+        </div>
+
+
+        <div id="alerts-container">
+
+            Loading alerts...
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         AGENT EXECUTION
+         ===================================================== -->
+
+    <section class="panel">
+
+        <div class="section-title">
+
+            <h2>
+                Agent Execution
+            </h2>
+
+            <span>
+                Multi-Agent SRE Mesh
+            </span>
+
+        </div>
+
+
+        <div id="agent-status-container">
+
+            Loading agent status...
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         ROOT CAUSE DIAGNOSIS
+         ===================================================== -->
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <h2>
+                Root Cause Diagnosis
+            </h2>
+
+            <span
+                id="confidence"
+                class="badge"
+            >
+                Loading...
+            </span>
+
+        </div>
+
+
+        <div class="root-cause">
+
+            <h3>
+                Most Likely Root Cause
+            </h3>
+
+
+            <p id="root-cause">
+                Loading...
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         REMEDIATION
+         ===================================================== -->
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <h2>
+                Remediation Plan
+            </h2>
+
+            <span>
+                HITL Protected
+            </span>
+
+        </div>
+
+
+        <div id="remediation-container">
+
+            Loading remediation plan...
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INCIDENT TIMELINE
+         ===================================================== -->
+
+    <section class="panel">
+
+        <div class="section-title">
+
+            <h2>
+                Incident Timeline
+            </h2>
+
+            <span>
+                Incident Events
+            </span>
+
+        </div>
+
+
+        <div id="timeline-container">
+
+            Loading timeline...
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         BLAMELESS RCA
+         ===================================================== -->
+
+    <section class="card">
+
+        <div class="section-title">
+
+            <h2>
+                Blameless RCA
+            </h2>
+
+        </div>
+
+
+        <div id="rca-container">
+
+            Loading RCA...
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+
+</body>
+
+</html>

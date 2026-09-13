@@ -1,0 +1,79 @@
+{
+  "incident_id": "INC-001",
+  "severity": "P1",
+  "service": "payment-api",
+  "summary": "The payment-api service experienced a P1 incident involving high memory usage, pod instability, and elevated HTTP 500 errors.",
+  "impact": "HTTP 500 error rates increased to approximately 35%, and the payment-api pod experienced a restart.",
+  "timeline": [
+    {
+      "timestamp": "2026-09-10T10:25:00",
+      "event": "Deployment v2.4.1 released to payment-api"
+    },
+    {
+      "timestamp": "2026-09-10T10:30:00",
+      "event": "Memory usage exceeded 90%"
+    },
+    {
+      "timestamp": "2026-09-10T10:31:00",
+      "event": "payment-api pod restarted"
+    },
+    {
+      "timestamp": "2026-09-10T10:32:00",
+      "event": "HTTP 500 error rate increased to 35%"
+    }
+  ],
+  "root_cause": "The most likely root cause was a memory-related failure associated with deployment v2.4.1. Memory usage increased after the deployment and the container was subsequently terminated with OOMKilled.",
+  "contributing_factors": [
+    "High application memory consumption",
+    "Pod instability following the memory increase",
+    "Production deployment preceded the observed failure",
+    "Insufficient early detection of the memory regression"
+  ],
+  "remediation": [
+    "Inspect deployment v2.4.1 configuration",
+    "Compare v2.4.1 with v2.4.0",
+    "Review payment-api memory limits",
+    "Investigate application memory behavior",
+    "Require human approval for rollback or pod deletion"
+  ],
+  "prevention": [
+    "Add memory regression testing before production deployment",
+    "Review Kubernetes resource requests and limits",
+    "Improve memory monitoring and alerting",
+    "Add deployment health checks",
+    "Document rollback procedures"
+  ],
+  "blameless_note": "The incident resulted from application memory behavior combined with the production deployment. The response process identified correlated alerts and established a likely failure path. No individual or team is assigned blame for the incident.",
+  "remediation_decisions": [
+    {
+      "action": "Inspect deployment v2.4.1 configuration",
+      "risk": "LOW",
+      "decision": "APPROVED"
+    },
+    {
+      "action": "Compare v2.4.1 with v2.4.0",
+      "risk": "LOW",
+      "decision": "APPROVED"
+    },
+    {
+      "action": "Check payment-api memory limits",
+      "risk": "LOW",
+      "decision": "APPROVED"
+    },
+    {
+      "action": "Roll back deployment v2.4.1 to v2.4.0",
+      "risk": "HIGH",
+      "decision": "DENIED"
+    },
+    {
+      "action": "kubectl delete pod payment-api",
+      "risk": "HIGH",
+      "decision": "DENIED"
+    },
+    {
+      "action": "Investigate HTTP 500 errors in payment-api logs",
+      "risk": "LOW",
+      "decision": "APPROVED"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "alert_id": "ALT-001",
+    "service": "payment-api",
+    "alert_type": "HighMemoryUsage",
+    "severity": "P2",
+    "timestamp": "2026-09-10T10:30:00",
+    "message": "Memory usage exceeded 90%"
+  },
+  {
+    "alert_id": "ALT-002",
+    "service": "payment-api",
+    "alert_type": "PodRestarting",
+    "severity": "P1",
+    "timestamp": "2026-09-10T10:31:00",
+    "message": "payment-api pod restarted"
+  },
+  {
+    "alert_id": "ALT-003",
+    "service": "payment-api",
+    "alert_type": "HTTP5xx",
+    "severity": "P1",
+    "timestamp": "2026-09-10T10:32:00",
+    "message": "HTTP 500 error rate increased to 35%"
+  }
+]
